@@ -17,7 +17,9 @@ body {
   background: linear-gradient(to right, #1e3c72, #2a5298);
   color: white;
   text-align: center;
-  padding: 80px 20px;
+  padding: 35px 15px;
+  /* sombra suave para dar profundidad */
+  box-shadow: 0 20px 30px rgba(0,0,0,0.3);
 }
 
 .hero h1 {
@@ -58,6 +60,18 @@ body {
   color: #222;
 }
 
+/* Hover */
+.hero .btn {
+  transition: filter 0.18s ease, transform 0.18s ease;
+}
+.hero .btn:hover {
+  filter: brightness(0.85);
+  transform: translateY(-3px);
+}
+.hero .btn.secondary:hover {
+  filter: brightness(0.9);
+}
+
 /* Secciones */
 .section {
   padding: 60px 20px;
@@ -76,8 +90,9 @@ body {
   color: #1e3c72;
 }
 
-.bg-light {
+.bg-light-rounded {
   background: #f7f7f7;
+  border-radius: 12px;
 }
 
 .bg-dark {
@@ -162,7 +177,76 @@ body {
   font-weight: bold;
 }
 
-/* About / Avatar */
+.contact-fixed {
+  position: fixed;
+  right: 24px;
+  top: 52%;
+  background: #1e3c72; /* azul oscuro */
+  color: white;
+  padding: 12px 14px;
+  border-radius: 10px;
+  box-shadow: 0 12px 36px rgba(0,0,0,0.18);
+  z-index: 60;
+  /* start off-canvas (to the right) and invisible; transitions will animate it in */
+  transform: translateX(110%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 320ms cubic-bezier(.2,.9,.2,1), opacity 220ms ease;
+}
+.contact-fixed .contact { text-align: left; }
+.contact-fixed .contact li { margin: 8px 0; }
+.contact-fixed .contact a { color: #ffce00; font-weight: 600; }
+.contact-fixed-title { margin: 0 0 8px 0; font-size: 0.95rem; font-weight: 700; color: #fff; }
+
+.contact-fixed-header { display: flex; align-items: center; justify-content: space-between; }
+.contact-close {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* Mini button visible on smaller screens */
+.contact-mini {
+  display: block;
+  position: fixed;
+  right: 18px;
+  top: 52%;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #1e3c72;
+  color: white;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+  z-index: 70;
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+body.contact-open .contact-mini { display: none; }
+.contact-mini:active { transform: scale(0.96); }
+.contact-mini:focus { outline: 2px solid rgba(255,206,0,0.9); outline-offset: 2px; }
+
+/* When body has .contact-open show the panel (used by script) */
+body.contact-open .contact-fixed {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Always show the mini toggle button; the panel visibility is controlled by the
+   'contact-open' class on the body. Removed breakpoint-based auto-show/ hide to
+   keep behavior consistent across screen sizes. */
+.contact-mini { display: block; }
+
+/* About  */
+.about-text p {
+  color: #444; 
+  font-weight: 500; 
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 140px 1fr;
@@ -187,6 +271,7 @@ body {
   }
   .avatar { margin: 0 auto; }
 }
+
 
 /* Footer */
 footer {
