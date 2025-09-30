@@ -65,6 +65,10 @@ body {
   margin: auto;
 }
 
+.next-section {
+  padding-top: 2.5rem;
+}
+
 .section h2 {
   text-align: center;
   margin-bottom: 30px;
@@ -79,6 +83,14 @@ body {
 .bg-dark {
   background: #1e3c72;
   color: white;
+}
+
+.bg-dark h2 {
+  color: white;
+}
+
+.bg-dark p {
+  text-align: center;
 }
 
 .bg-dark a {
@@ -148,6 +160,32 @@ body {
 .contact a {
   text-decoration: none;
   font-weight: bold;
+}
+
+/* About / Avatar */
+.about-grid {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 1.25rem;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+@media (max-width: 720px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .avatar { margin: 0 auto; }
 }
 
 /* Footer */
