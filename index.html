@@ -7,35 +7,84 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>👋 Hola, soy Pablo Gómez</h1>
-    <p>Desarrollador Full Stack | Apasionado por la IA y el Big Data</p>
-    <nav>
-      <a href="#proyectos">Proyectos</a> |
-      <a href="#sobre-mi">Sobre mí</a> |
-      <a href="#contacto">Contacto</a>
-    </nav>
+  <!-- Header / Hero -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>👋 Hola, soy <span>Pablo Gómez</span></h1>
+      <p>Desarrollador Full Stack | Apasionado por la IA y el Big Data</p>
+      <div class="hero-buttons">
+        <a href="#proyectos" class="btn">🚀 Ver proyectos</a>
+        <a href="cv.pdf" target="_blank" class="btn secondary">📄 Descargar CV</a>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <section id="proyectos">
-      <h2>🚀 Proyectos</h2>
-      <p>Aquí irán algunos de mis trabajos más destacados.</p>
-    </section>
+  <!-- Sobre mí -->
+  <section id="sobre-mi" class="section">
+    <h2>🙋 Sobre mí</h2>
+    <p>
+      Soy un desarrollador full stack con experiencia en PHP (Laravel), Python, JavaScript y SQL.
+      Actualmente curso una especialización en Inteligencia Artificial y Big Data.
+      Me apasiona crear aplicaciones prácticas que unan backend sólido, frontend claro y análisis de datos.
+    </p>
+  </section>
 
-    <section id="sobre-mi">
-      <h2>🙋 Sobre mí</h2>
-      <p>Soy un desarrollador con experiencia en Laravel, PHP, Python, JavaScript y SQL. Actualmente me estoy especializando en IA y Big Data.</p>
-    </section>
+  <!-- Proyectos -->
+  <section id="proyectos" class="section bg-light">
+    <h2>🚀 Proyectos</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>ETL de Ecommerce</h3>
+        <p>Pipeline en Python para extraer, transformar y cargar datos en SQLite con visualización de ventas.</p>
+        <span class="tech">Python | Pandas | SQLite</span>
+        <div class="links">
+          <a href="#">🔗 GitHub</a>
+          <a href="#">🌍 Demo</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3>API REST en Laravel</h3>
+        <p>Gestión de usuarios con autenticación JWT y documentación con Swagger.</p>
+        <span class="tech">PHP | Laravel | MySQL</span>
+        <div class="links">
+          <a href="#">🔗 GitHub</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3>ML: Abandono escolar</h3>
+        <p>Modelo predictivo para detectar riesgo de abandono escolar en jóvenes a partir de datos simulados.</p>
+        <span class="tech">Python | scikit-learn | Matplotlib</span>
+        <div class="links">
+          <a href="#">🔗 GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section id="contacto">
-      <h2>📩 Contacto</h2>
-      <ul>
-        <li>Email: <a href="mailto:pablojavier20037@gmail.com">pablojavier20037@gmail.com</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/pablo-gomez-villen" target="_blank">pablo-gomez-villen</a></li>
-        <li>GitHub: <a href="https://github.com/pablojgv03" target="_blank">pablojgv03</a></li>
-      </ul>
-    </section>
-  </main>
+  <!-- Estudios / Experiencia -->
+  <section id="estudios" class="section">
+    <h2>🎓 Estudios y Experiencia</h2>
+    <ul class="timeline">
+      <li><strong>2023–2024:</strong> Especialización en IA y Big Data – MEDAC</li>
+      <li><strong>2021–2023:</strong> Desarrollo de Aplicaciones Multiplataforma – IES Francisco Ayala</li>
+      <li><strong>2022–2023:</strong> Full Stack Developer – 1 año de experiencia</li>
+    </ul>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="section bg-dark">
+    <h2>📩 Contacto</h2>
+    <p>Puedes escribirme o conocer más sobre mi trabajo aquí:</p>
+    <ul class="contact">
+      <li>📧 <a href="mailto:pablojavier20037@gmail.com">pablojavier20037@gmail.com</a></li>
+      <li>💼 <a href="https://www.linkedin.com/in/pablo-gomez-villen" target="_blank">LinkedIn</a></li>
+      <li>🐙 <a href="https://github.com/pablojgv03" target="_blank">GitHub</a></li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Pablo Gómez | Portfolio creado con ❤️</p>
+  </footer>
 </body>
 </html>
