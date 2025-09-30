@@ -180,7 +180,7 @@ body {
 .contact-fixed {
   position: fixed;
   right: 24px;
-  top: 52%;
+  bottom: 2%;
   background: #1e3c72; /* azul oscuro */
   color: white;
   padding: 12px 14px;
@@ -212,11 +212,13 @@ body {
   display: block;
   position: fixed;
   right: 18px;
-  top: 52%;
+  bottom: 15%;
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #1e3c72;
+  /* ligeramente translúcido */
+  background: rgba(30,60,114,0.86);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   color: white;
   border: none;
   box-shadow: 0 10px 30px rgba(0,0,0,0.18);
