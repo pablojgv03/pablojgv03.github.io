@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Pablo Gómez</title>
+  <title>Pablo Gómez - Portfolio</title>
   <link rel="stylesheet" href="style.css">
     <!-- Favicons -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -151,6 +151,18 @@
       if (isOpen && closeBtn) {
         // focus the close button when panel is open on load
         setTimeout(() => closeBtn.focus(), 50);
+      }
+
+      // Observe the Contacto section to pause the floating contact (and mini button) when user reaches it
+      const contactoSection = document.getElementById('contacto');
+      if (contactoSection && 'IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) document.body.classList.add('contact-paused');
+            else document.body.classList.remove('contact-paused');
+          });
+        }, { root: null, threshold: 0.2 });
+        io.observe(contactoSection);
       }
     })();
   </script>

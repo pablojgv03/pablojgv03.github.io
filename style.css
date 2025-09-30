@@ -181,7 +181,7 @@ body {
   position: fixed;
   right: 24px;
   bottom: 2%;
-  background: #1e3c72; /* azul oscuro */
+  background: rgba(30,60,114,0.86);
   color: white;
   padding: 12px 14px;
   border-radius: 10px;
@@ -236,6 +236,20 @@ body.contact-open .contact-fixed {
   transform: translateX(0);
   opacity: 1;
   pointer-events: auto;
+}
+
+/* When user reaches the Experiencia section, pause the floating contact so it no longer follows */
+body.contact-paused .contact-fixed {
+  transform: translateX(110%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Also hide/disable the mini button when the contact is paused (e.g., user reached #contacto) */
+body.contact-paused .contact-mini {
+  transform: translateY(18px) scale(0.92);
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* Always show the mini toggle button; the panel visibility is controlled by the
